@@ -1,5 +1,5 @@
 <h2>User info</h2>
-<table>
+<table class="mb-3">
   <tbody>
     <tr>
       <%=image_tag @user.get_profile_image %>
@@ -15,6 +15,6 @@
   </tbody>
 </table>
 
-<%= link_to edit_user_path(@user), class: "btn btn-outline-secondary w-100" do %>
+<%= link_to edit_user_path(@user), class: "btn btn-outline-secondary w-100 mt-4" do %>
   <i class="fa-solid fa-user-gear"></i>
 <% end %>

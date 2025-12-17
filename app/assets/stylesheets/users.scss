@@ -1,3 +1,25 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+tr:nth-child(1),
+tr:nth-child(2){
+  border-bottom: 1px solid rgb(125, 125, 125);
+}
+
+th{
+  padding: 12px;
+}
+
+
+.table-header{
+  padding: 12px;
+  border-top: 1px solid rgb(222, 226, 230);
+  border-bottom: 1px solid rgb(222, 226, 230);
+  font-weight: bold;
+}
+
+.table-body{
+  padding: 12px;
+  border-top: 1px solid rgb(222, 226, 230);
+}

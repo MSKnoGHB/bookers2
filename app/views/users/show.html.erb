@@ -7,6 +7,18 @@
 
     <div class ="col-8 offset-1" >
       <h2>Books</h2>
+      <div class="row">
+        <div class="col-4 theader"></div>
+        <div class="col-4 theader">Title</div>
+        <div class="col-4 theader">Opinion</div>
+      </div>
+      <% @users.each do |user|%>
+        <div class="row">
+          <div class="col-4 user_image"></div>
+          <div class="col-4 book_title"></div>
+          <div class="col-4 book_body"></div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
