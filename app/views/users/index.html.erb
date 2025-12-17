@@ -1,23 +1,7 @@
 <div class="container">
   <div class="row">
     <div class ="col-3">
-      <h2>User info</h2>
-      <table>
-        <tbody>
-          <tr>
-            <th>name</th>
-            <td><%= @user.name %></td>
-          </tr>
-          <tr>
-            <th>introduction</th>
-            <td><%= @user.introduction %></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <%= link_to edit_user_path(@user), class: "btn btn-outline-secondary w-100" do %>
-        <i class="fa-solid fa-user-gear"></i>
-      <% end %>
+      <%= render "user_info", user:@user %>
       <%= render "books/new_book", book:@book %>
     </div>
 
