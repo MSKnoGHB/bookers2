@@ -1,20 +1,35 @@
-<h2>User info</h2>
-<table class="mb-3">
-  <tbody>
-    <tr>
+<div class="container">
+  <div class="row">
+    <div class="col-12 p-0">
+      <h2>User info</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
       <%=image_tag @user.get_profile_image %>
-    </tr>
-    <tr>
-      <th>name</th>
-      <td><%= @user.name %></td>
-    </tr>
-    <tr>
-      <th>introduction</th>
-      <td><%= @user.introduction %></td>
-    </tr>
-  </tbody>
-</table>
-
-<%= link_to edit_user_path(@user), class: "btn btn-outline-secondary w-100 mt-4" do %>
-  <i class="fa-solid fa-user-gear"></i>
-<% end %>
+    </div>
+  </div>
+  <div class="row header-row">
+    <div class="col-6 table-header">
+      name
+    </div>
+    <div class="col-6 table-body">
+      <%= @user.name %>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-6 table-header">
+      introduction
+    </div>
+    <div class="col-6 table-body">
+      <%= @user.introduction %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 p-0">
+      <%= link_to edit_user_path(@user), class: "btn btn-outline-secondary w-100 mt-4" do %>
+        <i class="fa-solid fa-user-gear"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
