@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <%=image_tag @user.get_profile_image %>
+      <%=image_tag user.get_profile_image %>
     </div>
   </div>
   <div class="row header-row">
@@ -14,7 +14,7 @@
       name
     </div>
     <div class="col-6 table-body">
-      <%= @user.name %>
+      <%= user.name %>
     </div>
   </div>
   <div class="row ">
@@ -22,12 +22,12 @@
       introduction
     </div>
     <div class="col-6 table-body">
-      <%= @user.introduction %>
+      <%= user.introduction %>
     </div>
   </div>
   <div class="row">
     <div class="col-12 p-0">
-      <%= link_to edit_user_path(@user), class: "btn btn-outline-secondary w-100 mt-4" do %>
+      <%= link_to edit_user_path(user), class: "btn btn-outline-secondary w-100 mt-4" do %>
         <i class="fa-solid fa-user-gear"></i>
       <% end %>
     </div>
