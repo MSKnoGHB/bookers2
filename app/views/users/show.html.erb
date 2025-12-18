@@ -2,23 +2,11 @@
   <div class="row">
     <div class ="col-3">
       <%= render "user_info", user:@user %>
-      <%= render "books/new_book", book:@book %>
+      <%= render "books/new_book", book:@new_book %>
     </div>
 
-    <div class ="col-8 offset-1" >
-      <h2>Books</h2>
-      <div class="row">
-        <div class="col-4 theader"></div>
-        <div class="col-4 theader">Title</div>
-        <div class="col-4 theader">Opinion</div>
-      </div>
-      <% @books.each do |user|%>
-        <div class="row">
-          <div class="col-4 user_image"></div>
-          <div class="col-4 book_title"></div>
-          <div class="col-4 book_body"></div>
-        </div>
-      <% end %>
-    </div>
+    <%= render "books/index_book", books: @books, user: @user %>
+
   </div>
 </div>
+ 
