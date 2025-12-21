@@ -1,0 +1,32 @@
+<div class = "container">
+  <div class = "row">
+    <div class="col-8 mx-auto mb-2">
+      <h2>User info</h2>
+    </div>
+  </div>
+  <%= form_with model: @user do |f| %>
+    <div class = "row">
+      <div class="col-8 mx-auto mb-3">
+        <%= f.label :name %><br>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+    </div>
+    <div class = "row">
+      <div class="col-8 mx-auto mb-3">
+        <%= f.label :profile_image %><br>
+        <%= f.file_field :profile_image, accept:"image/*" %>
+      </div>
+    </div>
+    <div class = "row">
+      <div class="col-8 mx-auto mb-3">
+        <%= f.label :introduction, "Opinion" %><br>
+        <%= f.text_area :introduction, class: "form-control" %>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="col-8 mx-auto mb-3">
+        <%= f.submit "Update book",class: "btn btn-secondary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
