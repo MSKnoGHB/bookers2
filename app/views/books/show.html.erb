@@ -1,3 +1,5 @@
+<%= flash[:notice] %>
+
 <div class="container">
   <div class="row">
     <div class ="col-3">
@@ -15,7 +17,7 @@
       <div class="row body-row">
         <div class="col-4 table-body">
           <%= link_to user_path(@user) do%>
-            <%= image_tag @user.get_profile_image %>
+            <%= image_tag @user.get_profile_image(100, 100) %>
             <p><%= @user.name %></p>
           <%end%>
         </div>

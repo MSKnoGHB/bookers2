@@ -13,12 +13,12 @@
   <% books.each do |book|%>
     <div class="row body-row">
       <div class="col-4 table-body">
-        <%= link_to book_path(book.user) do %>
-          <%= image_tag book.user.get_profile_image %>
+        <%= link_to book_path(book) do %>
+          <%= image_tag book.user.get_profile_image(100, 100) %>
         <% end %>  
       </div>
       <div class="col-4 table-body">
-        <%= link_to book_path(book.user) do %>
+        <%= link_to book_path(book) do %>
           <%= book.title %>
         <% end %>
       </div>

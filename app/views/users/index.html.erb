@@ -18,7 +18,7 @@
       </div>
       <% @users.each do |user|%>
         <div class="row body-row">
-          <div class="col-5 table-body"><%= image_tag user.get_profile_image %></div>
+          <div class="col-5 table-body"><%= image_tag user.get_profile_image(100, 100) %></div>
           <div class="col-4 table-body"><%= user.name %></div>
           <div class="col-3 table-body"><%= link_to "Show", user_path(user)%></div>
         </div>

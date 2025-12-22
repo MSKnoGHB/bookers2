@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :is_matching_login_user
 
   def index
     @users = User.all
@@ -18,9 +19,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find(params[:id])
-    if user.update(user_params)
-      redirect_to user_path(user)
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:notice] = "You have updated user successfully."
+      redirect_to user_path(@user)
     else
       render :edit
     end
@@ -28,16 +30,15 @@ class UsersController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.user_id = current_user
+    @book.user_id = current_user.id
     if @book.save
+      flash[:notice] = "Welcome! You have signed up successfully."
       redirect_to book_path(@book)
     else
       @books = Book.all 
       render :index
     end
   end
-
-
 
 
   private
@@ -51,7 +52,10 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :introduction, :profile_image)
   end
 
-
-
-
+  def is_matching_login_user
+    user = User.find(params[:id])
+    unless user.id == current_user.id
+      redirect_to home_path
+    end
+  end
 end
