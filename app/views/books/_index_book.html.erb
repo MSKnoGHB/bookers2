@@ -1,28 +1,28 @@
-<div class ="col-8 offset-1" >
+<div class ="col-md-8 offset-md-1" >
   <h2>Books</h2>
   <div class="row header-row">
-    <div class="col-4 table-header">
+    <div class="col-md-4 table-header">
     </div>
-    <div class="col-4 table-header">
+    <div class="col-md-4 table-header">
       Title
     </div>
-    <div class="col-4 table-header">
+    <div class="col-md-4 table-header">
       Opinion
     </div>
   </div>
   <% books.each do |book|%>
     <div class="row body-row">
-      <div class="col-4 table-body">
-        <%= link_to book_path(book) do %>
+      <div class="col-md-4 table-body">
+        <%= link_to user_path(book.user) do %>
           <%= image_tag book.user.get_profile_image(100, 100) %>
         <% end %>  
       </div>
-      <div class="col-4 table-body">
+      <div class="col-md-4 table-body">
         <%= link_to book_path(book) do %>
           <%= book.title %>
         <% end %>
       </div>
-      <div class="col-4 table-body">
+      <div class="col-md-4 table-body">
         <%= book.body %>
       </div>
     </div>

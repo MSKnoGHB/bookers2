@@ -1,6 +1,6 @@
 <div class ="container">
   <div class= "row">
-    <div class= "col-12">
+    <div class= "col-md-12">
       <% if @book.errors.any? %>
         <h3>
           <%= @book.errors.count %>errors prohibited this obj from being saved:
@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class ="row">
-    <div class ="col-3">
+    <div class ="col-md-3">
       <%= render "users/user_info", user: @user %>
       <%= render "new_book", book: @book %>
     </div>

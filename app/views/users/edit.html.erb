@@ -1,12 +1,12 @@
 <div class = "container">
   <div class = "row">
-    <div class="col-6 mx-auto mb-2">
+    <div class="col-md-6 mx-auto mb-2">
       <h2>User info</h2>
     </div>
   </div>
 
   <div class= "row">
-    <div class= "col-6 mx-auto ">
+    <div class= "col-md-6 mx-auto ">
       <% if @user.errors.any? %>
         <h3>
           <%= @user.errors.count %> errors prohibited this obj from being saved:
@@ -22,25 +22,25 @@
 
   <%= form_with model: @user do |f| %>
     <div class = "row">
-      <div class="col-6 mx-auto mb-3">
+      <div class="col-md-6 mx-auto mb-3">
         <%= f.label :name %>
         <%= f.text_field :name, class: "form-control" %>
       </div>
     </div>
     <div class = "row">
-      <div class="col-6 mx-auto mb-3">
+      <div class="col-md-6 mx-auto mb-3">
         <%= f.label :profile_image, "Image" %><br>
         <%= f.file_field :profile_image, accept:"image/*" %>
       </div>
     </div>
     <div class = "row">
-      <div class="col-6 mx-auto mb-3">
+      <div class="col-md-6 mx-auto mb-3">
         <%= f.label :introduction, "Opinion" %>
         <%= f.text_area :introduction, class: "form-control" %>
       </div>
     </div>
     <div class= "row">
-      <div class="col-6 mx-auto mb-3">
+      <div class="col-md-6 mx-auto mb-3">
         <%= f.submit "Update User",class: "btn btn-secondary" %>
       </div>
     </div>

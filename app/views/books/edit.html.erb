@@ -1,11 +1,11 @@
 <div class = "container">
   <div class = "row">
-    <div class="col-6 mx-auto mb-2">
+    <div class="col-md-6 mx-auto mb-2">
       <h1>Editing Book</h1>
     </div>
   </div>
   <div class= "row">
-    <div class= "col-6 mx-auto ">
+    <div class= "col-md-6 mx-auto ">
       <% if @book.errors.any? %>
         <h3>
           <%= @book.errors.count %> errors prohibited this obj from being saved:
@@ -20,24 +20,24 @@
   </div>
   <%= form_with model: @book do |f| %>
     <div class = "row">
-      <div class="col-6 mx-auto mb-3">
+      <div class="col-md-6 mx-auto mb-3">
         <%= f.label :title %>
         <%= f.text_field :title, class: "form-control" %>
       </div>
     </div>
     <div class = "row">
-      <div class="col-6 mx-auto mb-3">
+      <div class="col-md-6 mx-auto mb-3">
         <%= f.label :body, "Opinion" %>
         <%= f.text_area :body, class: "form-control" %>
       </div>
     </div>
     <div class= "row">
-      <div class="col-6 mx-auto mb-3">
-        <%= f.submit "Update book",class: "btn btn-success" %>
+      <div class="col-md-6 mx-auto mb-3">
+        <%= f.submit "Update Book",class: "btn btn-success" %>
       </div>
     </div>
     <div class= "row">
-      <div class="col-6 mx-auto mb-3">
+      <div class="col-md-6 mx-auto mb-3">
         <%= link_to "Show", book_path(@book) %>
         |
         <%= link_to "Back", books_path %>
